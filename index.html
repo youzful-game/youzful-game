@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset="UTF-8"><meta name="image" property="og:image" content="assets/img/preview.png"><link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon"><link rel="icon" href="assets/img/favicon.ico" type="image/x-icon"><title>Youzful Game</title><style media="screen">@font-face {
+<!doctype html><html><head><meta charset="UTF-8"><meta name="image" property="og:image" content="assets/img/preview.png"><link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon"><link rel="icon" href="assets/img/favicon.ico" type="image/x-icon"><link href="assets/css/lity.min.css" rel="stylesheet"><script src="assets/js/jquery-3.6.0.min.js"></script><script src="assets/js/lity.min.js"></script><title>Youzful Game</title><style media="screen">@font-face {
             font-family: ka1;
             src: url('assets/fonts/ka1.ttf');
             font-weight:400;
@@ -9,8 +9,9 @@
             src: url('assets/fonts/gotham.otf');
           }</style><style>html, body {
         height: 1vh;
-        margin:0;
-        padding:0;
+        width: auto;
+        margin: 0;
+        padding: 0;
       }
 
       body {
@@ -19,15 +20,6 @@
         background: -webkit-linear-gradient(45deg, rgba(137,192,1,1) 0%, rgba(0,205,215,1) 100%);
         background: linear-gradient(45deg, rgba(137,192,1,1) 0%, rgba(0,205,215,1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#89c001",endColorstr="#00cdd7",GradientType=1);
-      }
-      #tsparticles{
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        background-image: url('');
-        background-size: cover;
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
       }
 
       #borne-container {
@@ -39,7 +31,7 @@
       #borne-img {
         display: block;
         position: relative;
-        top:200px;
+        top: 200px;
         width: 1163px;
       }
     	canvas {
@@ -65,64 +57,79 @@
 			}
 
       #logo {
-        display:block;
+        display: block;
         position: absolute;
-        top:20px;
+        top: 20px;
         left: 20px;
         width: 15%;
       }
 
-      @media only screen and (max-width: 1026px) and (orientation: portrait) {
-        #tsparticles {
-          display: none;
+      .phone {
+        position: relative;
+        top: 300px;
+        height: 100px;
+        width: 200px;
+        border: 10px solid white;
+        border-radius: 20px;
+        animation: rotate 1.5s ease-in-out infinite alternate;
+        display: none;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .message {
+        position: relative;
+        top: 300px;
+        color: white;
+        font-size: 2em;
+        margin-top: 100px;
+        display: none;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-family: "gotham";
+      }
+
+      @keyframes rotate {
+        0% {
+		      transform: rotate(0deg)
+	      }
+	      50% {
+	        transform: rotate(-90deg)
         }
-        #logo {
-          width: 20%;
-        }
-        #borne-img {
-          display: none;
+        100% {
+		      transform: rotate(-90deg)
+	      }
+      }
+
+      @media only screen and (max-device-width: 1180px) and (orientation: portrait) {
+        .phone, .message {
+          display: block;
         }
         #borne-container {
-          width: 550px;
-          height: 400px;
-          margin-left: auto;
-          margin-right: auto;
-          top: 30vh;
-          position: relative;
-        }
-        #game-container {
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          position: absolute;
+          display: none;
         }
       }
 
-      @media only screen and (max-width: 1026px) and (orientation: landscape) {
-        #tsparticles {
+      @media only screen and (max-device-width: 1180px) and (orientation: landscape) {
+        .phone, .message {
           display: none;
-        }
-        #logo {
-          width: 20%;
         }
         #borne-img {
-          display: none;
-        }
-        #borne-container {
-          width: 550px;
-          height: 400px;
-          margin-left: auto;
-          margin-right: auto;
-          padding-bottom: 20px;
-          padding-top: 20px;
-          position: relative;
+          top: 0px;
         }
         #game-container {
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          position: absolute;
+          top: 296px;
         }
-      }</style><script defer="defer" src="809.js"></script><script defer="defer" src="app.js"></script></head><body><div style="font-family:ka1; position:absolute; left:-1000px; visibility:hidden;"></div><div id="tsparticles"></div><a href="https://www.youzful-by-ca.fr/"><img id="logo" src="assets/img/logo-youzful.png"></a><div id="borne-container"><img id="borne-img" src="/assets/img/borne.png"><div id="game-container"></div></div></body></html>
+        #borne-container {
+          margin-right: 0px;
+        }
+        #borne-img {
+        }
+        body {
+          width: 100vw;
+        }
+        #logo {
+          z-index: 100;
+        }
+      }</style><script defer="defer" src="809.js"></script><script defer="defer" src="app.js"></script></head><body><div style="font-family:ka1; position:absolute; left:-1000px; visibility:hidden;"></div><a href="https://www.youzful-by-ca.fr/"><img id="logo" src="assets/img/logo-youzful.png"></a><a id="lfb" href="//www.youtube.com/watch?v=a2YnGb7BwYQ" data-lity></a> <a id="yapla" href="//www.youtube.com/watch?v=a2YnGb7BwYQ" data-lity></a> <a id="kls" href="//www.youtube.com/watch?v=a2YnGb7BwYQ" data-lity></a> <a id="blank" href="//www.youtube.com/watch?v=a2YnGb7BwYQ" data-lity></a><div id="borne-container"><img id="borne-img" src="/assets/img/borne.png"><div id="game-container"></div></div><div class="phone"></div><div class="message">Veuillez passer en mode paysage :)</div></body></html>
